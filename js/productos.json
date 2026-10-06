@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nombre": "Teclado mecanico", "precio": 45000, "categoria": "Perifericos", "icono": "teclado.svg" },
+  { "id": 2, "nombre": "Mouse inalambrico", "precio": 22000, "categoria": "Perifericos", "icono": "mouse.svg" },
+  { "id": 3, "nombre": "Mousepad XL", "precio": 8000, "categoria": "Perifericos", "icono": "mousepad.svg" },
+  { "id": 4, "nombre": "Hub USB-C", "precio": 15000, "categoria": "Perifericos", "icono": "hub.svg" },
+  { "id": 5, "nombre": "Monitor 24''", "precio": 180000, "categoria": "Imagen y Video", "icono": "monitor.svg" },
+  { "id": 6, "nombre": "Webcam Full HD", "precio": 27000, "categoria": "Imagen y Video", "icono": "webcam.svg" },
+  { "id": 7, "nombre": "Auriculares gamer", "precio": 38000, "categoria": "Audio", "icono": "auriculares.svg" },
+  { "id": 8, "nombre": "Silla ergonomica", "precio": 120000, "categoria": "Mobiliario", "icono": "silla.svg" }
+]

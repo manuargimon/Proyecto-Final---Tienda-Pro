@@ -1,0 +1,22 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.oculto {
+  display: none;
+}
+
+#vistaCatalogo .card {
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+#vistaCatalogo .card img {
+  width: 70px;
+  height: 70px;
+  margin: 15px auto 0 auto;
+}
+
+#listaCarrito .list-group-item {
+  align-items: center;
+}

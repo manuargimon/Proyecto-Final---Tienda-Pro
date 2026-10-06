@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TiendaJS - Simulador de Compra</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">HypeTech Argentina</span>
+      <button id="btnCarrito" class="btn btn-success">
+        🛒 Carrito <span id="contadorCarrito" class="badge bg-light text-dark ms-1">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="vistaCatalogo" class="container mb-5">
+    <div class="mb-4">
+      <label for="selectCategoria" class="form-label">Filtrar por categoria</label>
+      <select id="selectCategoria" class="form-select" style="max-width: 300px;">
+        <option value="todas">Todas las categorias</option>
+      </select>
+    </div>
+
+    <div id="contenedorCatalogo" class="row g-3"></div>
+  </main>
+
+  <section id="vistaCarrito" class="container mb-5 oculto">
+    <h2 class="mb-3">Tu carrito</h2>
+
+    <div id="listaCarrito" class="list-group mb-3"></div>
+
+    <p class="fs-5 text-end">Total: <strong id="totalCarrito">$0</strong></p>
+
+    <div class="d-flex flex-wrap gap-2 justify-content-end">
+      <button id="btnSeguirComprando" class="btn btn-outline-secondary">Seguir comprando</button>
+      <button id="btnVaciarCarrito" class="btn btn-secondary">Vaciar carrito</button>
+      <button id="btnFinalizarCompra" class="btn btn-success">Finalizar compra</button>
+    </div>
+  </section>
+
+  <section id="vistaCheckout" class="container mb-5 oculto" style="max-width: 500px;">
+    <h2 class="mb-3">Finalizar compra</h2>
+
+    <div id="resumenCheckout" class="card card-body bg-light mb-3"></div>
+
+    <form id="formCheckout">
+      <div class="mb-3">
+        <label for="inputNombreCheckout" class="form-label">Nombre y apellido</label>
+        <input type="text" id="inputNombreCheckout" class="form-control" value="Manuel Argimon" />
+      </div>
+
+      <div class="mb-3">
+        <label for="inputEmailCheckout" class="form-label">Correo electronico</label>
+        <input type="email" id="inputEmailCheckout" class="form-control" value="manuel.argimon@mail.com" />
+      </div>
+
+      <div class="mb-3">
+        <label for="selectMedioPago" class="form-label">Medio de pago</label>
+        <select id="selectMedioPago" class="form-select">
+          <option value="tarjeta">Tarjeta de credito</option>
+          <option value="mercadopago">Mercado Pago</option>
+        </select>
+      </div>
+
+      <div id="camposTarjeta">
+        <div class="mb-3">
+          <label for="inputTarjeta" class="form-label">Numero de tarjeta</label>
+          <input type="text" id="inputTarjeta" class="form-control" value="4507 1234 5678 9010" />
+        </div>
+        <div class="mb-3">
+          <label for="inputVencimiento" class="form-label">Vencimiento</label>
+          <input type="text" id="inputVencimiento" class="form-control" value="12/29" />
+        </div>
+        <div class="mb-3">
+          <label for="inputCvv" class="form-label">CVV</label>
+          <input type="text" id="inputCvv" class="form-control" value="123" />
+        </div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button type="button" id="btnVolverCarrito" class="btn btn-outline-secondary flex-fill">Volver al carrito</button>
+        <button type="submit" id="btnConfirmarCompra" class="btn btn-success flex-fill">Confirmar compra</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script src="js/catalogo.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
